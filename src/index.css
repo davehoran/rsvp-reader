@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #ffffff;
+  --fg: #111111;
+  --surface: #f3f4f6;
+  --border: #e5e7eb;
+  --orp-color: #ef4444;
+  --accent: #3b82f6;
+  --muted: #6b7280;
+}
+
+[data-theme="dark"] {
+  --bg: #111111;
+  --fg: #f9fafb;
+  --surface: #1f2937;
+  --border: #374151;
+  --orp-color: #f87171;
+  --accent: #60a5fa;
+  --muted: #9ca3af;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.rsvp-container {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  font-family: monospace;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  align-items: baseline;
+  min-width: 0;
+}
+
+.rsvp-pre {
+  text-align: right;
+  overflow: hidden;
+  white-space: pre;
+}
+
+.rsvp-pivot {
+  color: var(--orp-color);
+  font-weight: bold;
+}
+
+.rsvp-post {
+  text-align: left;
+  overflow: hidden;
+  white-space: pre;
+}
